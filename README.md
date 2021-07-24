@@ -1,5 +1,5 @@
 # TIC-TAC-TOE
-# a simple GUI tic-tac-toe python project which tries maximum to win or make a tie
+# a simple GUI tic-tac-toe python project
     from tkinter import *
     import random
     b=[[0,0,0],[0,0,0],[0,0,0]]
