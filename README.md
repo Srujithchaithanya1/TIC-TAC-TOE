@@ -34,9 +34,11 @@
                 if(maximum==3):
                     print('you lost')
                     flag=0
+                    exit(0)
                 if(minimum==-3):
                     print("you won")
                     flag=0
+                    exit(0)
                 low=check.index(minimum)
                 high=check.index(maximum)
 
