@@ -263,4 +263,4 @@
                                           command= lambda row=row, column=column: next_turn(row,column))
             a[row][column].grid(row=row,column=column)
 
-window.mainloop()
+    window.mainloop()
