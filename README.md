@@ -38,6 +38,117 @@
                     print("you won")
                     flag=0
                 low=check.index(minimum)
+                high=check.index(maximum)
+
+                if(maximum==2):
+
+
+                    #fill diagonal d1
+                    if(high==0):
+                        for j in range(3):
+                            if(b[j][j]!=-1 and b[j][j]!=1):
+                                b[j][j]=1
+                                a[j][j]['text']=player[1]
+
+                                done=1
+                                print('you lost')
+                                exit
+                                break
+                    #fill r0
+                    elif(high==2):
+                        for j in range(3):
+                            if(b[0][j]!=-1 and b[0][j]!=1):
+                                b[0][j]=1
+                                #print('entered')
+                                #print(b)
+                                a[0][j]['text']=player[1]
+
+                                done=1
+                                print('you lost')
+                                exit
+                                break
+                    #fill r1
+                    elif(high==3):
+                        for j in range(3):
+                            if(b[1][j]!=-1 and b[1][j]!=1):
+                                b[1][j]=1 
+                                a[1][j]['text']=player[1]
+
+                                done=1
+                                print('you lost')
+                                exit
+                                break
+                    #fill r2
+                    elif(high==4):
+                        for j in range(3):
+                            if(b[2][j]!=-1 and b[2][j]!=1):
+                                b[2][j]=1 
+                                a[2][j]['text']=player[1]
+
+                                done=1
+                                print('you lost')
+                                exit
+                                break
+                    #fill h0
+                    elif(high==5):
+                        for j in range(3):
+                            if(b[j][0]!=-1 and b[j][0]!=1):
+                                b[j][0]=1 
+                                a[j][0]['text']=player[1]
+
+                                done=1
+                                print('you lost')
+                                exit
+                                break
+                    #fill h1
+                    elif(high==6):
+                        for j in range(3):
+                            if(b[j][1]!=-1 and b[j][1]!=1):
+                                b[j][1]=1 
+                                a[j][1]['text']=player[1]
+
+                                done=1
+                                print('you lost')
+                                exit
+                                break
+                    #fill h2
+                    elif(high==7):
+                        for j in range(3):
+                            if(b[j][2]!=-1 and b[j][2]!=1):
+                                b[j][2]=1 
+                                a[j][2]['text']=player[1]
+
+                                done=1
+                                print('you lost')
+                                exit
+                                break
+                    #fill d2
+                    else:
+                        if(b[2][0]==-1 and b[1][1]==-1):
+                            b[0][2]=1
+                            a[0][2]['text']=player[1]
+
+                            done=1
+                            print('you lost')
+                            exit
+                            #break
+                        if(b[0][2]==-1 and b[1][1]==-1):
+                            b[2][0]=1
+                            a[2][0]['text']=player[1]
+
+                            done=1
+                            print('you lost')
+                            exit
+                            #break
+                        if(b[0][2]==-1 and b[2][0]==-1):
+                            b[0][2]=1
+                            a[0][2]['text']=player[1]
+                            done=1
+                            print('you lost')
+                            exit
+                            #break
+
+
                 #fill diagonal d1
                 if(low==0):
                     for j in range(3):
@@ -152,4 +263,4 @@
                                           command= lambda row=row, column=column: next_turn(row,column))
             a[row][column].grid(row=row,column=column)
 
-    window.mainloop()
+window.mainloop()
